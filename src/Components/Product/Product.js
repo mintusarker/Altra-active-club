@@ -63,7 +63,7 @@ const Product = () => {
                     <div><h2>Msc</h2><p>Education</p></div>
                 </div> 
 
-                <h2>Add A Break</h2>
+                <h2 className='add-break'>Add A Break</h2>
 
                 <div className='time-break'>
                 <button>10s</button>

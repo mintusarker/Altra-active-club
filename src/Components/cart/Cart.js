@@ -5,6 +5,7 @@ const Cart = (props) => {
     const {handleAddToCart} = props;
     const {img, name, time} = props.product;
     return (
+        
         <div className='product'>
             <img src= {img} alt="" />
            <div className='product-info'>
