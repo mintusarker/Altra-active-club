@@ -13,7 +13,9 @@
 }
 
 .cart-container{
-    background-color: lightcyan;
+    background-color:whitesmoke;
+    position: sticky;
+    top: 0;
 }
 
 .info{
