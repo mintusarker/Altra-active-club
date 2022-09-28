@@ -35,7 +35,8 @@
     justify-content: space-around;
     background-color: beige;
     border-radius: 10px;
-    margin: 10px;   
+    margin: 10px;  
+    margin-bottom: 40px; 
 }
 .time-break{
     height: 80px;
@@ -46,4 +47,17 @@
     justify-content: space-around;
     margin: 10px;
 
+}
+
+.time-break button{
+   
+    background-color: whitesmoke;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    font-size: 15px;
+}
+.time-break button:hover {
+    background-color: rgb(177, 228, 177);
 }

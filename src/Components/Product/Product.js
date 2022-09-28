@@ -2,6 +2,7 @@ import { faLocation, faLocationArrow, faLocationDot, faMapLocation } from '@fort
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
+import Sidecart from '../sidecart/Sidecart';
 import './Product.css';
 
 const Product = () => {
@@ -15,19 +16,22 @@ const Product = () => {
         .then(data => setProducts(data))
     }, []);
 
-    const handleAddToCart = (selectProduct) => {
+
+    const handleAddToCart = (selectProduct) =>{
         let newCart = [];
-        const exists = cart.find(product => product.time === selectProduct.time);
-        if(!exists){
-            selectProduct.time = 0;
+        const exists = cart.find(product => product.id === selectProduct.id);
+        if(exists){
+            selectProduct.quantity = 1;
             newCart = [...cart ,selectProduct];
         }
         else{
             const rest = cart.filter(product => product.id !== selectProduct.id);
-            exists.time = exists.time + 1;
+            exists.quantity = exists.quantity + 1;
             newCart = [...rest , exists];
+            console.log(newCart)
         }
         setCart(newCart);
+
     }
 
 
@@ -69,7 +73,10 @@ const Product = () => {
                 <button>50s</button>
                 </div>
              </div>
-            
+
+             <div>
+            <Sidecart cart = {cart}></Sidecart>
+             </div>
             </div>
         </div>
     );

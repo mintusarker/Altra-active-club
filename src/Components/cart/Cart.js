@@ -11,7 +11,7 @@ const Cart = (props) => {
              <p>{name}</p>
              <p>Time Required :{time}s</p>
             </div>
-            <button onClick={()=>handleAddToCart(time)} className='btn-btn'>Add To List</button>
+            <button onClick={()=>handleAddToCart(props.product)} className='btn-btn'>Add To List</button>
         </div>
     );
 };
