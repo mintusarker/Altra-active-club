@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Product from './Components/Product/Product';
+import Question from './Components/Questions/Question';
+
 
 function App() {
   return (
     <div className=''>
       <Header></Header>
       <Product></Product>
-      
+      <Question></Question>
     </div>
   );
 }

@@ -76,5 +76,20 @@
     height: 50px;
     border-radius: 10px;
     margin: 10px;
-    background-color: lightgray;
+    background-color: #e3d4d4;
 } 
+.toast-button{
+        width: 200px;
+        height: 40px;
+        background-color: rgb(80, 80, 199);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
+        margin-top: 30px;
+        margin-left: 80px;
+    }
+
+.toast-button:hover{
+        background-color: hwb(217 7% 61%);
+    }

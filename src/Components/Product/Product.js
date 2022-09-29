@@ -5,6 +5,7 @@ import Cart from '../cart/Cart';
 import Sidecart from '../sidecart/Sidecart';
 import './Product.css';
 
+
 const Product = () => {
 
     const [products, setProducts] = useState([]);
@@ -40,6 +41,7 @@ const Product = () => {
     console.log(newTime)
     SetTime(newTime)
   }
+
 
     return (
         <div className='shop-container'>
@@ -83,13 +85,17 @@ const Product = () => {
              <div>
             <Sidecart 
             cart = {cart}
-            timeHandle = {timeHandle}
+            // timeHandle = {timeHandle}
             ></Sidecart>
              </div>
-             
+
             <div >
             <h3 className='break-time'>Break Time : <div>{time}</div> </h3>
             </div>
+
+        
+          
+            <button className='toast-button'>Activity Completed</button>
             </div>
         </div>
         
