@@ -1,8 +1,7 @@
 .product{
     height: 350px;
     border-radius: 8px;
-    background-color: whitesmoke;
-    box-shadow: 100px;
+    background-color: rgb(236, 209, 209);
     padding: 10px;
 }
 

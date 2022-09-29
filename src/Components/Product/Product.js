@@ -51,7 +51,9 @@ const Product = () => {
  }
 
     return (
-        <div className='shop-container'>
+     <div>
+        <div className='select'><h2>Instruments Select</h2></div>
+           <div className='shop-container'>
             <div className="products-container">
                 {
                     products.map(product => <Cart
@@ -100,7 +102,8 @@ const Product = () => {
           
             <button onClick={()=>notify()} className='toast-button'>Activity Completed</button><ToastContainer></ToastContainer>
             </div>
-        </div>      
+        </div>   
+     </div>   
     );
 };
 
