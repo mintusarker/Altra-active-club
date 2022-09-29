@@ -32,6 +32,7 @@ const removeFromDb = time =>{
 }
 
 export {
-   localStorageData, 
+   localStorageData,
    removeFromDb
   }
+

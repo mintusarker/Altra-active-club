@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import Cart from '../cart/Cart';
-import Sidecart from '../sidecart/Sidecart';
+import SideCart from '../sidecart/SideCart';
 import { localStorageData } from '../Utilities/Setdata';
 import './Product.css';
 
@@ -12,8 +12,7 @@ const Product = () => {
 
     const [products, setProducts] = useState([]);
     const [cart , setCart] = useState([]);
-
-    const [time , SetTime] = useState([])
+    const [time , SetTime] = useState([]);
 
     useEffect( () =>{
         fetch('fakedata.json')
@@ -75,9 +74,9 @@ const Product = () => {
                 </div>
 
                 <div className='info-info'>
-                    <div><h2>60 kg</h2><p>Weight</p></div>
-                    <div><h2>6 feet</h2><p>Height</p></div>
-                    <div><h2>Msc</h2><p>Education</p></div>
+                    <div><h3>60 kg</h3><p>Weight</p></div>
+                    <div><h3>6 feet</h3><p>Height</p></div>
+                    <div><h3>Msc</h3><p>Education</p></div>
                 </div> 
 
                 <h2 className='add-break'>Add A Break</h2>
@@ -92,7 +91,8 @@ const Product = () => {
              </div>
 
              <div>
-            <Sidecart  cart = {cart}></Sidecart>
+                
+            <SideCart cart = {cart}></SideCart>
 
              </div>
 

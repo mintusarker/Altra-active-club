@@ -1,7 +1,7 @@
 import React from 'react';
-import './Sidecart.css';
+import './SideCart.css';
 
-const Sidecart = (props) => {
+const SideCart = (props) => {
     const {cart} = props;
    
     let total = 0;
@@ -17,4 +17,4 @@ const Sidecart = (props) => {
     );
 };
 
-export default Sidecart;
+export default SideCart;
