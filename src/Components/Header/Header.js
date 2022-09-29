@@ -8,10 +8,7 @@ const Header = () => {
         <nav className='Header'>
         <div className='title'><h1> <FontAwesomeIcon className='icon' icon={faDumbbell}></FontAwesomeIcon> Physical Fitness Center</h1></div>
         <div className='btn'>
-            <a href="/Shop">Shop</a>
             <a href="/orders">Orders</a>
-            <a href="/inventory">Inventory</a>
-            <a href="/about">About</a>
         </div>
        </nav>
     );

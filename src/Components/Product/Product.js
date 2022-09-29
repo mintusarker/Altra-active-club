@@ -1,6 +1,7 @@
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 import Cart from '../cart/Cart';
 import Sidecart from '../sidecart/Sidecart';
 import { localStorageData } from '../Utilities/Setdata';
@@ -19,7 +20,8 @@ const Product = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     }, []);
-
+    
+// time required button event handler
     const handleAddToCart = (selectCart) =>{
         let newCart = [];
         const exists = cart.find(product => product.id === selectCart.id);
@@ -34,17 +36,19 @@ const Product = () => {
             console.log(newCart)
         }
         setCart(newCart);
-
     }
 
+// break time handler
     const timeHandle = (time) =>{
     const newTime = time;
     SetTime(newTime);
     localStorageData(newTime);
-    
-
   }
 
+//   toast handler
+ const notify = () =>{
+    toast('WOW !! Good Job. Thank You.')
+ }
 
     return (
         <div className='shop-container'>
@@ -86,21 +90,17 @@ const Product = () => {
              </div>
 
              <div>
-            <Sidecart 
-            cart = {cart}
-            ></Sidecart>
+            <Sidecart  cart = {cart}></Sidecart>
+
              </div>
 
             <div >
-            <h3 className='break-time'>Break Time : <div>{time}</div> </h3>
+            <h3 className='break-time'>Break Time : <div>{time} </div></h3>
             </div>
-
-        
           
-            <button className='toast-button'>Activity Completed</button>
+            <button onClick={()=>notify()} className='toast-button'>Activity Completed</button><ToastContainer></ToastContainer>
             </div>
-        </div>
-        
+        </div>      
     );
 };
 

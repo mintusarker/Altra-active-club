@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Product from './Components/Product/Product';
 import Question from './Components/Questions/Question';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
