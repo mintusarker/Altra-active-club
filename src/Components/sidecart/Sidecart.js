@@ -11,8 +11,7 @@ const Sidecart = (props) => {
     return (
         <div className='cart'>
              <h2 className='exercice-detail'>Exercise Details</h2>
-             <h3 className='exercice-time'>Exercise Time : <div> {total} s</div> </h3>
-             <h3 className='exercice-time'>Break Time :</h3>
+             <h3 className='exercice-time'>Exercise Time : <div> {total} seconds</div> </h3>
         </div>
         
     );

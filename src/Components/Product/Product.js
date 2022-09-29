@@ -9,6 +9,7 @@ const Product = () => {
 
     const [products, setProducts] = useState([]);
     const [cart , setCart] = useState([]);
+    const [time , SetTime] = useState(0)
 
     useEffect( () =>{
         fetch('fakedata.json')
@@ -34,6 +35,11 @@ const Product = () => {
 
     }
 
+    const timeHandle = (id) =>{
+    const newTime = id;
+    console.log(newTime)
+    SetTime(newTime)
+  }
 
     return (
         <div className='shop-container'>
@@ -66,17 +72,22 @@ const Product = () => {
                 <h2 className='add-break'>Add A Break</h2>
 
                 <div className='time-break'>
-                <button>10s</button>
-                <button>20s</button>
-                <button>30s</button>
-                <button>40s</button>
-                <button>50s</button>
+                <button onClick={() => timeHandle('10s')}>10s</button>
+                <button onClick={() => timeHandle('20s')}>20s</button>
+                <button onClick={() => timeHandle('30s')}>30s</button>
+                <button onClick={() => timeHandle('40s')}>40s</button>
+                <button onClick={() => timeHandle('50s')}>50s</button>
                 </div>
              </div>
 
              <div>
-            <Sidecart cart = {cart}></Sidecart>
+            <Sidecart 
+            cart = {cart}
+            timeHandle = {timeHandle}
+            ></Sidecart>
              </div>
+
+             <h3 className='exercice-time'>Break Time : {time}</h3>
             </div>
         </div>
     );
