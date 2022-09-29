@@ -86,10 +86,13 @@ const Product = () => {
             timeHandle = {timeHandle}
             ></Sidecart>
              </div>
-
-             <h3 className='exercice-time'>Break Time : {time}</h3>
+             
+            <div >
+            <h3 className='break-time'>Break Time : <div>{time}</div> </h3>
+            </div>
             </div>
         </div>
+        
     );
 };
 

@@ -68,3 +68,13 @@
 .time-break button:hover {
     background-color: rgb(177, 228, 177);
 }
+
+.break-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: lightgray;
+} 
