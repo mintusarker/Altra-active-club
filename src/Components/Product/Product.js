@@ -1,8 +1,9 @@
-import { faLocation, faLocationArrow, faLocationDot, faMapLocation } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Cart from '../cart/Cart';
 import Sidecart from '../sidecart/Sidecart';
+import { localStorageData } from '../Utilities/Setdata';
 import './Product.css';
 
 
@@ -10,14 +11,14 @@ const Product = () => {
 
     const [products, setProducts] = useState([]);
     const [cart , setCart] = useState([]);
-    const [time , SetTime] = useState(0)
+
+    const [time , SetTime] = useState([])
 
     useEffect( () =>{
         fetch('fakedata.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, []);
-
 
     const handleAddToCart = (selectCart) =>{
         let newCart = [];
@@ -36,10 +37,12 @@ const Product = () => {
 
     }
 
-    const timeHandle = (id) =>{
-    const newTime = id;
-    console.log(newTime)
-    SetTime(newTime)
+    const timeHandle = (time) =>{
+    const newTime = time;
+    SetTime(newTime);
+    localStorageData(newTime);
+    
+
   }
 
 
@@ -85,7 +88,6 @@ const Product = () => {
              <div>
             <Sidecart 
             cart = {cart}
-            // timeHandle = {timeHandle}
             ></Sidecart>
              </div>
 
